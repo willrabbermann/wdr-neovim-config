@@ -14,7 +14,7 @@ I don't use Microsoft LSP because im a robot.
 -- Darker            guic  = 4       
 -- Black             guic  = 5    
 -- ----------------------------  
--- FTE replica		   guic	= 6
+-- FTE replica       guic  = 6
 -- ----------------------------  
 -- FLAGS
 -------------------------------------------------
