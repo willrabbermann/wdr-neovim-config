@@ -25,3 +25,5 @@ local match_status = 0
 -------------------------------------------------
 ```
 Set the theme number by editing ```theme.lua```
+
+```TODO: add git sidebar colors```
