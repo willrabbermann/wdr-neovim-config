@@ -39,6 +39,7 @@ Blue backgrounds
 
 Transparent
 (cterm colors only, limited by your terminal's color palette!)
-![0](https://user-images.githubusercontent.com/105755092/212414509-767dde52-74a7-41f5-8db7-20e2435e0bfc.png)
+![0](https://user-images.githubusercontent.com/105755092/212415920-9f8010b2-99c3-46c2-810c-c9f6da425155.png)
+
 
 
