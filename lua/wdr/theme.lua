@@ -97,7 +97,7 @@ vim.api.nvim_set_hl(0, 'SpecialKey',		{ ctermfg = Normal, fg = normal } )
 
 -- Special is apparently brackets {} 
 vim.api.nvim_set_hl(0, 'Special',			{ ctermfg = Normal, fg = cyan } )
-vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = Normal, fg = lightmagenta } )
+vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = "LightMagenta", fg = lightmagenta } )
 -- delimiter is your parenthesis ()
 vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = Normal, fg = cyan } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
