@@ -28,8 +28,8 @@ map('', '<C-z>', ':undo<CR>')
 -- redo
 map('', '<C-S-Z>', ':redo<CR>')
 
--- (re)source init.lua
-map('', '<F12>', ':luafile %<CR>:echo "sourced ~/.config/nvim/init.lua"<CR>')
+-- reload theme
+map('', '<F12>', ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 
 -- Clear high light
 -- press ctrl+l by default
