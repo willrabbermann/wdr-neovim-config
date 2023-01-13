@@ -2,7 +2,7 @@
 --		WILLIAM RABBERMANN'S NEOVIM THEME
 -------------------------------------------------
 
-local theme_number = 6
+local theme_number = 1
 
 -- Themes
 -- ----------------------------

@@ -29,7 +29,7 @@ map('', '<C-z>', ':undo<CR>')
 map('', '<C-S-Z>', ':redo<CR>')
 
 -- (re)source init.lua
-map('', '<F12>', ':luafile %<CR>:echo "(re)sourced ~/.config/nvim/init.lua"<CR>')
+map('', '<F12>', ':luafile %<CR>:echo "sourced ~/.config/nvim/init.lua"<CR>')
 
 -- Clear high light
 -- press ctrl+l by default
