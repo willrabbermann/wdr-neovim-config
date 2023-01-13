@@ -14,12 +14,11 @@ local theme_number = 1
 -- Black			 guic	= 5
 -- ----------------------------
 -- FTE replica		 guic	= 6
-
+-- ----------------------------
 -- FLAGS
 -- -------------------------------------
 -- enable function highlights
 local functions_flag = 1
-local functions = '#76bfcd'
 -- force line number bar to match status bar
 -- 0 will use the theme's custom selection
 local match_status = 0 
@@ -28,6 +27,7 @@ local match_status = 0
 local normal = '#c0c5ce'
 local statusbar = '#262626'
 local sidebar_cursor = '#2d3d42'
+local functions = '#76bfcd'
 
 local black = '#111717'
 local darkgrey = '#999999'
