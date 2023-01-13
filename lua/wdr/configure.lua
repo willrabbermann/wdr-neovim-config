@@ -1,8 +1,8 @@
 
-vim.cmd("set title")
-vim.cmd("set cindent")
-vim.cmd("set ts=4 sw=4")
-
+vim.o.title = true
+vim.o.cindent = true
+vim.o.ts = 4
+vim.o.sw = 4
 vim.wo.number = true
 vim.o.hlsearch = true
 

@@ -18,6 +18,7 @@ local theme_number = 1
 -- FLAGS
 -- -------------------------------------
 -- enable function highlights
+
 local functions_flag = 1
 -- force line number bar to match status bar
 -- 0 will use the theme's custom selection
@@ -242,3 +243,10 @@ vim.api.nvim_set_hl(0, 'ModeMsg',			{ ctermfg = 0, fg = background, bg = backgro
 vim.api.nvim_set_hl(0, 'StatusLine',		{ ctermfg = 0, fg = background, bg = background, sp = 'NONE' } ) -- disable StatusLine
 
 end
+
+
+-- Set Git sidebar
+vim.api.nvim_set_hl(0, 'DiffAdd',			{ ctermfg = "Green",  fg = green, bg = sidebar } )
+vim.api.nvim_set_hl(0, 'DiffChange',		{ ctermfg = "Yellow", fg = darkyellow, bg = sidebar } )
+vim.api.nvim_set_hl(0, 'DiffDelete',		{ ctermfg = "Red", fg = red, bg = sidebar} )
+vim.api.nvim_set_hl(0, 'SignColumn',		{ ctermfg = "DarkGrey", bg = sidebar} )
