@@ -26,3 +26,17 @@ local match_status = 0
 -------------------------------------------------
 ```
 Set the theme number by editing ```theme.lua```
+
+FTE & My theme
+
+![5_6](https://user-images.githubusercontent.com/105755092/212410266-eda0d040-ea34-4982-89be-40c04a72be85.png)
+
+
+Blue backgrounds
+
+![2_3](https://user-images.githubusercontent.com/105755092/212410289-ef083a8a-aabd-420e-8188-ef3c41a501e4.png)
+
+
+Transparent
+
+![0_1](https://user-images.githubusercontent.com/105755092/212410307-e60520c0-1bfa-4d71-bf8b-39787df52e4f.png)
