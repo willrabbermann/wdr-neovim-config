@@ -6,16 +6,16 @@ My personal neovim configuration and themes. 5 themes with varying background co
 -- Themes      
 -- ----------------------------      
 -- TUI (transparent) cterm = 0
--- TUI (transparent) guic = 1       
--- TUI (Soft blue)   guic	= 2   
--- Dark blue         guic	= 3    
--- Darker            guic	= 4       
--- Black             guic	= 5    
+-- TUI (transparent) guic  = 1       
+-- TUI (Soft blue)   guic  = 2   
+-- Dark blue         guic  = 3    
+-- Darker            guic  = 4       
+-- Black             guic  = 5    
 -- ----------------------------  
 -- FTE replica		   guic	= 6
 -- ----------------------------  
 -- FLAGS
--- -------------------------------------
+-------------------------------------------------
 -- enable function highlights
 local functions_flag = 1
 local functions = '#76bfcd'
