@@ -20,7 +20,6 @@ I don't use Microsoft LSP because im a robot.
 -------------------------------------------------
 -- enable function highlights
 local functions_flag = 1
-local functions = '#76bfcd'
 -- force line number bar to match status bar
 -- 0 will use the theme's custom selection
 local match_status = 0 
