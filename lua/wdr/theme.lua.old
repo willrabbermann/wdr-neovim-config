@@ -1,0 +1,41 @@
+-- Using your TUI color scheme
+
+
+
+vim.o.cursorline = 1
+vim.api.nvim_set_hl(0, 'LineNr',		{ ctermfg = "DarkGrey"  } )
+vim.api.nvim_set_hl(0, 'CursorLineNr',	{ ctermfg = "White" } )
+vim.api.nvim_set_hl(0, 'CursorLine', { } ) -- disable cursor underline
+
+vim.api.nvim_set_hl(0, 'Search',		{ ctermbg = "DarkGrey", ctermfg = "White" } )
+vim.api.nvim_set_hl(0, 'IncSearch',		{ ctermbg = "DarkGrey", ctermfg = "LightCyan" } )
+
+vim.api.nvim_set_hl(0, 'MatchParen',	{ bold = 1, underline = 1 } )
+
+vim.api.nvim_set_hl(0, 'Special',		{ ctermfg = Normal } )
+vim.api.nvim_set_hl(0, 'SpecialChar',	{ ctermfg = Normal } )
+vim.api.nvim_set_hl(0, 'Structure', 	{ ctermfg = Normal } )
+vim.api.nvim_set_hl(0, 'Operator', 		{ ctermfg = Normal } )
+vim.api.nvim_set_hl(0, 'Special', 		{ ctermfg = Normal } )
+vim.api.nvim_set_hl(0, 'Identifier', 	{ ctermfg = Normal } )
+vim.api.nvim_set_hl(0, 'shShellVariables', { ctermfg = Normal } )
+
+vim.api.nvim_set_hl(0, 'Comment',  		{ ctermfg = "Blue"  } )
+vim.api.nvim_set_hl(0, 'Constant',		{ ctermfg = "Magenta" } )
+vim.api.nvim_set_hl(0, 'Type',			{ ctermfg = "DarkGreen" } )
+vim.api.nvim_set_hl(0, 'PreProc',		{ ctermfg = "LightCyan" } )
+vim.api.nvim_set_hl(0, 'Statement',		{ ctermfg = "DarkGreen" } )
+vim.api.nvim_set_hl(0, 'Function',		{ ctermfg = "DarkBlue" } )
+vim.api.nvim_set_hl(0, 'Todo', 			{ ctermfg = "DarkYellow" } )
+--vim.api.nvim_set_hl(0, 'Normal', 	    { ctermfg = "White" } )
+
+vim.api.nvim_set_hl(0, 'WarningMsg',    { ctermbg = "DarkYellow", ctermfg = "Black" } )
+vim.api.nvim_set_hl(0, 'ErrorMsg',		{ ctermbg = "Red", ctermfg = "Black" } )
+vim.api.nvim_set_hl(0, 'Question',		
+	{ ctermbg = "DarkGreen", ctermfg = "Black", italic = 1 } 
+)
+
+vim.api.nvim_set_hl(0, 'Pmenu',			{ ctermbg = 0 } ) -- disable Pmenu background
+vim.api.nvim_set_hl(0, 'NonText',		{ ctermfg = 0 } ) -- disable NonText
+vim.api.nvim_set_hl(0, 'ModeMsg',		{ ctermfg = 0 } ) -- disable ModeMsg
+vim.api.nvim_set_hl(0, 'StatusLine',	{ ctermfg = 0 } ) -- disable StatusLine
