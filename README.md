@@ -40,5 +40,4 @@ Transparent
 (cterm colors only, limited by your terminal's color palette!)
 ![0](https://user-images.githubusercontent.com/105755092/212415920-9f8010b2-99c3-46c2-810c-c9f6da425155.png)
 
-
-
+Todo: hexadecimal 0x# digit context colors in FTE
