@@ -1,7 +1,6 @@
 # wdr-neovim-config
-My personal neovim configuration and themes. 5 themes with varying background colors, 1 replica FTE editor theme.
+My (minimal)(no lsp/autocomplete) personal neovim configuration and themes. 5 themes with varying background colors, 1 replica FTE editor theme.
 
-I don't use Microsoft LSP because im a robot.
 ```
 --		WILLIAM RABBERMANN'S NEOVIM THEME      
 -------------------------------------------------
