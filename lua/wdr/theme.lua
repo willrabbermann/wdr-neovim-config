@@ -2,7 +2,7 @@
 --		WILLIAM RABBERMANN'S NEOVIM THEME
 -------------------------------------------------
 
-local theme_number = 1
+local theme_number = 6
 
 -- Themes
 -- ----------------------------
@@ -22,7 +22,7 @@ local theme_number = 1
 local functions_flag = 1
 -- force line number bar to match status bar
 -- 0 will use the theme's custom selection
-local match_status = 0 
+local match_status = 0
 -----------------------------------------
 
 local normal = '#c0c5ce'

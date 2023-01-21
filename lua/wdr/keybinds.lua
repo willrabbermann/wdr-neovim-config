@@ -23,12 +23,13 @@ map('n', '<F2>', ':NvimTreeToggle<CR>')
 -- some terminals dont sent out case sensitive key combinations
 -- Alacritty's Z key must be remapped for this to work 
 -- { key: Z,         mods: Control|Shift,               chars: "\x1b[90;6u" }
--- undo
 map('', '<C-z>', ':undo<CR>')
--- redo
 map('', '<C-S-Z>', ':redo<CR>')
-
--- reload theme
+map('', '<C-s>', ':w<CR>')
+map('', '<C-m>', ':make<CR>')
+map('', '<C-d>', ':make debug<CR>')
+map('', '<leader>', ':tabnew<CR>');
+map('', '<C-q>', ':q<CR>')
 map('', '<F12>', ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 
 -- Clear high light
