@@ -8,7 +8,7 @@ vim.o.hlsearch = true
 
 require('gitsigns').setup()
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     icons_enabled = true,
     theme = 'codedark',
@@ -31,11 +31,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {
-		'encoding', 
-		{'fileformat', symbols = { unix = "λ"}},
-		'filetype'
-    },
+    lualine_x = {'encoding', {'fileformat', symbols = { unix = "λ"}}, 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -51,7 +47,7 @@ require('lualine').setup {
   winbar = {},
   inactive_winbar = {},
   extensions = {}
-}
+})
 
 -- configure nvim-tree
 vim.g.loaded_netrw = 1
@@ -76,6 +72,6 @@ require("nvim-tree").setup({
 })
 
 -- configure treesitter
-require("nvim-treesitter.configs").setup{highlight={enable=true}}
+require("nvim-treesitter.configs").setup({highlight={enable=true}})
 
 

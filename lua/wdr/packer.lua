@@ -16,10 +16,7 @@ require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	
 	-- lualine status bar
-	use {
-	    'nvim-lualine/lualine.nvim',
-    	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-	}
+	use 'nvim-lualine/lualine.nvim'
 	
 	-- treesitter
 	use {
@@ -31,13 +28,7 @@ require('packer').startup(function(use)
 	}
 	
 	-- tree view
-	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons',
-		},
-		tag = 'nightly'
-	}
+	use	'nvim-tree/nvim-tree.lua'
 	
 	-- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
 	local has_plugins, plugins = pcall(require, 'custom.plugins')

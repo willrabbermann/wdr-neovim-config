@@ -28,7 +28,7 @@ map('', '<C-S-Z>', ':redo<CR>')
 map('', '<C-s>', ':w<CR>')
 map('', '<C-m>', ':make<CR>')
 map('', '<C-d>', ':make debug<CR>')
-map('', '<leader>', ':tabnew<CR>');
+map('', '<leader>', ':tabnew<CR>')
 map('', '<C-q>', ':q<CR>')
 map('', '<F12>', ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 
@@ -37,4 +37,6 @@ map('', '<F12>', ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded t
 
 -- Shift line/visual selection tab
 -- press shift+<|>
+
+-- Ctrl+P mid function type will bring up autocomplete list
 

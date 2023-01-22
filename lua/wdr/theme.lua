@@ -146,8 +146,8 @@ vim.api.nvim_set_hl(0, 'WarningMsg',    	{ ctermbg = "DarkYellow", ctermfg = 'Bl
 vim.api.nvim_set_hl(0, 'ErrorMsg',			{ ctermbg = "Red", ctermfg = 'Black', fg = black, bg = red } )
 vim.api.nvim_set_hl(0, 'Question',			{ ctermbg = 'DarkGreen', ctermfg = 'Black', italic = 1, 
 											fg = normal, bg = statusbar })
-
 vim.api.nvim_set_hl(0, 'Pmenu',				{ ctermbg = 0, bg = statusbar, sp = 'NONE' } )
+vim.api.nvim_set_hl(0, 'PmenuSel',			{ ctermbg = 0, bg = Black, fg = White } )
 vim.api.nvim_set_hl(0, 'NonText',			{ ctermfg = 0, fg = background, bg = background, sp = 'NONE' } )
 vim.api.nvim_set_hl(0, 'MoreMsg',			{ fg = normal } )
 
@@ -231,8 +231,8 @@ vim.api.nvim_set_hl(0, 'WarningMsg',    	{ ctermbg = "DarkYellow", ctermfg = 'Bl
 vim.api.nvim_set_hl(0, 'ErrorMsg',			{ ctermbg = "Red", ctermfg = 'Black', fg = black, bg = '#bd101c' } )
 vim.api.nvim_set_hl(0, 'Question',			{ ctermbg = 'DarkGreen', ctermfg = 'Black', italic = 1, 
 											  fg = normal, bg = statusbar })
-
 vim.api.nvim_set_hl(0, 'Pmenu',				{ ctermbg = 0, bg = statusbar, sp = 'NONE' } )
+vim.api.nvim_set_hl(0, 'PmenuSel',			{ ctermbg = 0, bg = Black, fg = White } )
 vim.api.nvim_set_hl(0, 'NonText',			{ ctermfg = 0, fg = background, bg = background, sp = 'NONE' } )
 vim.api.nvim_set_hl(0, 'MoreMsg',			{ fg = normal } )
 
