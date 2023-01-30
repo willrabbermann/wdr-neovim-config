@@ -17,9 +17,11 @@ end
 map('n','<C-a>', 'ggVG')
 -- yank visual selection to clipboard
 map('x', '<C-c>', '"+y')
+-- Cut and paste the boring way
+map('x', '<C-x>', ':d<CR>')
+map('', '<C-v>', ':p<CR>')
 -- NvimTreeToggle
 map('n', '<F2>', ':NvimTreeToggle<CR>')
-
 -- some terminals dont sent out case sensitive key combinations
 -- Alacritty's Z key must be remapped for this to work 
 -- { key: Z,         mods: Control|Shift,               chars: "\x1b[90;6u" }
@@ -31,6 +33,10 @@ map('', '<C-d>', ':make debug<CR>')
 map('', '<leader>', ':tabnew<CR>')
 map('', '<C-q>', ':q<CR>')
 map('', '<F12>', ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
+-- b to move backwards and n to goto next search term (like man pages)
+map('n', 'b', ':?<CR>')
+map('n', 'n', ':/<CR>')
+
 
 -- Clear high light
 -- press ctrl+l by default
