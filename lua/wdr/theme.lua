@@ -2,7 +2,7 @@
 --		WILLIAM RABBERMANN'S NEOVIM THEME
 -------------------------------------------------
 
-local theme_number = 6
+local theme_number = 5
 
 -- Themes
 -- ----------------------------
@@ -112,7 +112,7 @@ vim.api.nvim_set_hl(0, 'cBracket',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'Structure', 		{ ctermfg = Normal, fg = cyan } )
 vim.api.nvim_set_hl(0, 'Operator', 			{ ctermfg = Normal, fg = cyan } )
 vim.api.nvim_set_hl(0, 'Identifier', 		{ ctermfg = Normal, fg = normal } )
-vim.api.nvim_set_hl(0, 'shShellVariables', 	{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, 'shShellVariables', 	{ ctermfg = Normal, fg = green } )
 
 vim.api.nvim_set_hl(0, 'Comment',  			{ ctermfg = "Blue", fg = blue } )
 
@@ -121,10 +121,10 @@ vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = "Red", fg = red } )
 vim.api.nvim_set_hl(0, 'String',			{ ctermfg = "Magenta", fg = magenta } )
 vim.api.nvim_set_hl(0, 'Character',			{ ctermfg = "LightMagenta", fg = lightmagenta } )
 vim.api.nvim_set_hl(0, 'Boolean',			{ ctermfg = "Red", fg = red } )
-vim.api.nvim_set_hl(0, 'Type',				{ ctermfg = "White", fg = '#f9f9f9' } )
+vim.api.nvim_set_hl(0, 'Type',				{ ctermfg = "White", fg = green } )
 vim.api.nvim_set_hl(0, 'PreProc',			{ ctermfg = "LightCyan", fg = lightcyan } )
 vim.api.nvim_set_hl(0, 'Statement',			{ ctermfg = "Green", fg = green } )
-vim.api.nvim_set_hl(0, 'Keyword',			{ ctermfg = "White", fg = '#f9f9f9' } )
+vim.api.nvim_set_hl(0, 'Keyword',			{ ctermfg = "White", fg = green } )
 
 if (functions_flag == 1)
 	then
