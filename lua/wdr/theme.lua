@@ -112,7 +112,7 @@ vim.api.nvim_set_hl(0, 'cBracket',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'Structure', 		{ ctermfg = Normal, fg = cyan } )
 vim.api.nvim_set_hl(0, 'Operator', 			{ ctermfg = Normal, fg = cyan } )
 vim.api.nvim_set_hl(0, 'Identifier', 		{ ctermfg = Normal, fg = normal } )
-vim.api.nvim_set_hl(0, 'shShellVariables', 	{ ctermfg = Normal, fg = green } )
+vim.api.nvim_set_hl(0, 'shShellVariables', 	{ ctermfg = Normal, fg = normal } )
 
 vim.api.nvim_set_hl(0, 'Comment',  			{ ctermfg = "Blue", fg = blue } )
 
