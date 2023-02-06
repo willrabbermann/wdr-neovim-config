@@ -28,7 +28,7 @@ map('n', '<LEADER>', ':tabnew<CR>')
 map('n', '<C-q>', ':q<CR>')
 -- abandon file (dangerous)
 map('n', '<A-S-L>', ':q!<CR>')
-map('i', '<A-S-L>', ':q!<CR>')
+map('i', '<A-S-L>', '<ESC>:q!<CR>')
 -- map home / end keys
 map('n', '<C-E>', '$')
 map('n', '<C-H>', '0')
