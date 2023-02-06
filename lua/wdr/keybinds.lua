@@ -1,6 +1,3 @@
--------------------------------------------------
--- Functionally define keymaps
--------------------------------------------------
 local function map(mode, lhs, rhs, opts)
   local options = { noremap=true, silent=true }
   if opts then
@@ -9,40 +6,46 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--------------------------------------------------
--- Will's custom neovim keybinds
--------------------------------------------------
-
 -- select all
-map('n','<C-a>', 'ggVG')
--- yank visual selection to clipboard
+map('n','<C-S-a>', 'ggVG')
+-- yank selection to clipboard
 map('x', '<C-c>', '"+y')
--- Cut and paste the boring way
-map('x', '<C-x>', ':d<CR>')
-map('', '<C-v>', ':p<CR>')
+-- paste from clipboard
+map('n', '<C-v>', '"+p')
+-- cut to clipboard
+map('x', '<C-x>', '"+d')
 -- NvimTreeToggle
-map('n', '<F2>', ':NvimTreeToggle<CR>')
--- some terminals dont sent out case sensitive key combinations
--- Alacritty's Z key must be remapped for this to work 
--- { key: Z,         mods: Control|Shift,               chars: "\x1b[90;6u" }
-map('', '<C-z>', ':undo<CR>')
-map('', '<C-S-Z>', ':redo<CR>')
-map('', '<C-s>', ':w<CR>')
-map('', '<C-m>', ':make<CR>')
-map('', '<C-d>', ':make debug<CR>')
-map('', '<leader>', ':tabnew<CR>')
-map('', '<C-q>', ':q<CR>')
-map('', '<F12>', ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
--- b to move backwards and n to goto next search term (like man pages)
-map('n', 'b', ':?<CR>')
-map('n', 'n', ':/<CR>')
+map('n', '<F4>', ':NvimTreeToggle<CR>')
+-- redo/undo in normal and insert
+map('n', '<C-z>', ':undo<CR>')
+map('n', '<C-S-Z>', ':redo<CR>')
+map('i', '<C-z>', '<ESC>:undo<CR>i')
+map('i', '<C-S-Z>', '<ESC>:redo<CR>i')
+-- make commands (normal mode) 
+map('n', '<C-p>', ':make<CR>')
+map('n', '<C-S-P>', ':make debug<CR>')
+-- save / new tab / quit tab
+map('n', '<C-s>', ':w<CR>')
+map('n', '<LEADER>', ':tabnew<CR>')
+map('n', '<C-q>', ':q<CR>')
+-- map to home/end keys
+map('n', '<C-E>', '<S-$>')
+map('n', '<C-H>', '2')
+-- swap case of word
+map('n', '<C-UP>', 'viwU')
+map('n', '<C-DOWN>', 'viwu')
+-- swap case of char
+map('n', '<S-UP>', '~')
+map('n', '<S-DOWN>', '~')
+-- delete word forwards/backwards
+map('n', '<C-S-RIGHT>', 'diw')
+map('n', '<C-S-LEFT>', 'daw')
+-- Clear high light | ctrl+l by default
+map('n', '<S-TAB>', ':nohl<CR>')
+-- reload theme.lua
+map('n', '<F14>',
+':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 
-
--- Clear high light
--- press ctrl+l by default
-
--- Shift line/visual selection tab
--- press shift+<|>
-
--- Ctrl+P mid function type will bring up autocomplete list
-
+-- Shuft+<<|>> shift line/visual selection tab
+-- Ctrl+P during insert mode brings up P-Menu / auto completion list
+-- Ctrl+[ normal mode
