@@ -26,6 +26,7 @@ map('n', '<C-S-P>', ':make debug<CR>')
 map('n', '<C-s>', ':w<CR>')
 map('n', '<LEADER>', ':tabnew<CR>')
 map('n', '<C-q>', ':q<CR>')
+map('n', '<C-S-Q>', ':q!<CR>')
 -- map home / end keys
 map('n', '<C-E>', '$')
 map('n', '<C-H>', '0')
