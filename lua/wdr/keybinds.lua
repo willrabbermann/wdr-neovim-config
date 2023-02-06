@@ -16,11 +16,9 @@ map('n', '<C-v>', '"+p')
 map('x', '<C-x>', '"+d')
 -- NvimTreeToggle
 map('n', '<F4>', ':NvimTreeToggle<CR>')
--- redo/undo in normal and insert
+-- redo / undo
 map('n', '<C-z>', ':undo<CR>')
 map('n', '<C-S-Z>', ':redo<CR>')
-map('i', '<C-z>', '<ESC>:undo<CR>i')
-map('i', '<C-S-Z>', '<ESC>:redo<CR>i')
 -- make commands (normal mode) 
 map('n', '<C-p>', ':make<CR>')
 map('n', '<C-S-P>', ':make debug<CR>')
@@ -28,19 +26,19 @@ map('n', '<C-S-P>', ':make debug<CR>')
 map('n', '<C-s>', ':w<CR>')
 map('n', '<LEADER>', ':tabnew<CR>')
 map('n', '<C-q>', ':q<CR>')
--- map to home/end keys
-map('n', '<C-E>', '<S-$>')
-map('n', '<C-H>', '2')
+-- map home / end keys
+map('n', '<C-E>', '$')
+map('n', '<C-H>', '0')
 -- swap case of word
 map('n', '<C-UP>', 'viwU')
 map('n', '<C-DOWN>', 'viwu')
 -- swap case of char
 map('n', '<S-UP>', '~')
 map('n', '<S-DOWN>', '~')
--- delete word forwards/backwards
+-- delete word forwards / backwards
 map('n', '<C-S-RIGHT>', 'diw')
 map('n', '<C-S-LEFT>', 'daw')
--- Clear high light | ctrl+l by default
+-- clear high light || ctrl+l by default
 map('n', '<S-TAB>', ':nohl<CR>')
 -- reload theme.lua
 map('n', '<F14>',
