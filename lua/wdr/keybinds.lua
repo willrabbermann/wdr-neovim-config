@@ -14,8 +14,6 @@ map('x', '<C-c>', '"+y')
 map('n', '<C-v>', '"+p')
 -- cut to clipboard
 map('x', '<C-x>', '"+d')
--- NvimTreeToggle
-map('n', '<F4>', ':NvimTreeToggle<CR>')
 -- redo / undo
 map('n', '<C-z>', ':undo<CR>')
 map('n', '<C-S-Z>', ':redo<CR>')
@@ -45,8 +43,12 @@ map('n', '<C-S-LEFT>', 'daw')
 -- clear high light || ctrl+l by default
 map('n', '<S-TAB>', ':nohl<CR>')
 -- reload theme.lua
-map('n', '<F14>',
+map('n', '<F3>',
 ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
+-- NvimTreeToggle
+map('n', '<F4>', ':NvimTreeToggle<CR>')
+-- reload current file
+map('n', '<F5>', ':e<CR>')
 
 -- Shuft+<<|>> shift line/visual selection tab
 -- Ctrl+P during insert mode brings up P-Menu / auto completion list
