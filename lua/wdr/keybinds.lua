@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- select all
-map('n','<C-S-a>', 'ggVG')
+map('n','<C-S-A>', 'ggVG')
 -- yank selection to clipboard
 map('x', '<C-c>', '"+y')
 -- paste from clipboard
@@ -38,8 +38,8 @@ map('n', '<C-DOWN>', 'viwu')
 map('n', '<S-UP>', '~')
 map('n', '<S-DOWN>', '~')
 -- delete word forwards / backwards
-map('n', '<C-S-RIGHT>', 'diw')
-map('n', '<C-S-LEFT>', 'daw')
+map('n', '<C-S-RIGHT>', 'dW')
+map('n', '<C-S-LEFT>', 'diW')
 -- clear high light || ctrl+l by default
 map('n', '<S-TAB>', ':nohl<CR>')
 -- reload theme.lua
@@ -50,6 +50,11 @@ map('n', '<F4>', ':NvimTreeToggle<CR>')
 -- reload current file
 map('n', '<F5>', ':e<CR>')
 
--- Shuft+<<|>> shift line/visual selection tab
--- Ctrl+P during insert mode brings up P-Menu / auto completion list
+-- Shift+<<|>> shift line/visual selection tab
+-- Ctrl+P during insert mode brings up the P Menu
+
 -- Ctrl+[ normal mode
+-- i insert mode
+-- v visual mode
+-- : command mode
+-- / pattern search mode
