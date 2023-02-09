@@ -20,8 +20,11 @@ map('n', '<C-S-Z>', ':redo<CR>')
 -- make commands (normal mode) 
 map('n', '<C-p>', ':make<CR>')
 map('n', '<C-S-P>', ':make debug<CR>')
--- save / new tab / quit tab
+-- save / save exit / new tab / quit tab
 map('n', '<C-s>', ':w<CR>')
+map('i', '<C-s>', '<ESC>:w<CR>')
+map('n', '<C-S-S>', ':wq<CR>')
+map('i', '<C-S-S>', '<ESC>:wq<CR>')
 map('n', '<LEADER>', ':tabnew<CR>')
 map('n', '<C-q>', ':q<CR>')
 map('i', '<C-q>', '<ESC>:q<CR>')
