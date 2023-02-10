@@ -1,39 +1,46 @@
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap=true, silent=true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+	local options = { noremap=true, silent=true }
+	if opts then
+		options = vim.tbl_extend('force', options, opts)
+	end
+	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- select all
-map('n','<C-S-A>', 'ggVG')
--- yank selection to clipboard
+local function map_ni(lhs, rhs, args, opts)	
+	if args then
+		if args.sleepins then
+			map('i', lhs, '<ESC>'..rhs..':1.5sleep<CR><INSERT>', opts)
+		elseif args.ins then
+			map('i', lhs, '<C-o>'..rhs, opts)
+		end
+	else
+		map('i', lhs, '<ESC>'..rhs, opts)
+	end
+		map('n', lhs, rhs, opts)
+end
+
+function test()
+	echo "Test"
+end
+
+-- Save and quit
+map_ni('<C-s>', ':w<CR>', {sleepins=1})
+map_ni('<C-S-S>', ':wq<CR>')
+map_ni('<C-q>', ':q<CR>')
+-- Abandon changes (dangerous)
+map_ni('<A-S-L>', ':q!<CR>')
+map_ni('<A-S-E>', ':nohl<CR>:e!<CR>', {ins=1})
+map('n', '<LEADER>', ':tabnew<CR>')
+
 map('x', '<C-c>', '"+y')
--- paste from clipboard
-map('n', '<C-v>', '"+p')
--- cut to clipboard
 map('x', '<C-x>', '"+d')
--- redo / undo
+map_ni('<C-v>', '"+p')
+map('c', '<C-v>', '<C-R>"')
+
 map('n', '<C-z>', ':undo<CR>')
 map('n', '<C-S-Z>', ':redo<CR>')
--- make commands (normal mode) 
-map('n', '<C-p>', ':make<CR>')
-map('n', '<C-S-P>', ':make debug<CR>')
--- save / save exit / new tab / quit tab
-map('n', '<C-s>', ':w<CR>')
-map('i', '<C-s>', '<ESC>:w<CR>')
-map('n', '<C-S-S>', ':wq<CR>')
-map('i', '<C-S-S>', '<ESC>:wq<CR>')
-map('n', '<LEADER>', ':tabnew<CR>')
-map('n', '<C-q>', ':q<CR>')
-map('i', '<C-q>', '<ESC>:q<CR>')
--- abandon file (dangerous)
-map('n', '<A-S-L>', ':q!<CR>')
-map('i', '<A-S-L>', '<ESC>:q!<CR>')
--- map home / end keys
-map('n', '<C-E>', '$')
-map('n', '<C-H>', '0')
+
+map('n','<C-S-A>', 'ggVG')
 -- swap case of word
 map('n', '<C-UP>', 'viwU')
 map('n', '<C-DOWN>', 'viwu')
@@ -43,15 +50,33 @@ map('n', '<S-DOWN>', '~')
 -- delete word forwards / backwards
 map('n', '<C-S-RIGHT>', 'dW')
 map('n', '<C-S-LEFT>', 'diW')
--- clear high light || ctrl+l by default
-map('n', '<S-TAB>', ':nohl<CR>')
--- reload theme.lua
-map('n', '<F3>',
+
+map_ni('<C-E>', '$', {ins=1})
+map_ni('<C-H>', '0', {ins=1})
+map_ni('<S-TAB>', ':nohl<CR>', {ins=1})
+map('x', '<C-E>', '$')
+map('x', '<C-H>', '0')
+
+-- select current word
+map('n','8', 'viw')
+-- find all current word / selection
+map_ni('<C-f>', '*# viw"sy')
+map('x', '<C-f>', '"sy /<C-R>s<CR>')
+-- search replace current word / selection
+map_ni('<C-r>', '<ESC><ESC>*# viw"sy :%s///g<LEFT><LEFT><C-R>s', {ins=1}, { noremap=true, silent=false })
+map('x', '<C-r>', '"sy :%s/<C-R>s//g<LEFT><LEFT><C-R>s', { noremap=true, silent=false })
+
+map_ni('<A-DOWN>', '/<CR>', {ins=1})
+map_ni('<A-UP>', '?<CR>', {ins=1})
+map_ni('<A-RIGHT>','/<CR>', {ins=1})
+map_ni('<A-LEFT>', '?<CR>', {ins=1})
+
+-- Function keys
+map('n', '<F2>',
 ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
--- NvimTreeToggle
+map('n', '<F3>',
+':luafile ~/.config/nvim/lua/wdr/keybinds.lua<CR>:echo "Reloaded keybinds.lua"<CR>')
 map('n', '<F4>', ':NvimTreeToggle<CR>')
--- reload current file
-map('n', '<F5>', ':e<CR>')
 
 -- Shift+<<|>> shift line/visual selection tab
 -- Ctrl+P during insert mode brings up the P Menu
