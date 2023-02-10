@@ -78,6 +78,13 @@ if (theme_number < 6)
 
 vim.api.nvim_set_hl(0, "Normal",			{ ctermfg = "LightGrey", fg = normal, bg = background } )
 
+-- Spell checking
+-- alacritty >= 0.11.0 required for undercurl
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = 1 } )
+vim.api.nvim_set_hl(0, "SpellLocal", { } )
+vim.api.nvim_set_hl(0, "SpellRare", { } )
+vim.api.nvim_set_hl(0, "SpellCap", { } )
+
 -- Line number & current cursor line highlight
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'LineNr',			{ ctermfg = "DarkGrey", fg = darkgrey, bg = sidebar } )

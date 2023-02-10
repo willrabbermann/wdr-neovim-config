@@ -86,6 +86,7 @@ map('x', '<C-r>', '"sy :%s/<C-R>s//g<LEFT><LEFT><C-R>s', { noremap=true, silent=
 map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
 -- Function keys
+map_ni('<F1>', ':tabnew<CR>:help | only<CR>')
 map('n', '<F2>',
 ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 map('n', '<F3>',
@@ -96,10 +97,13 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 
 -- Other keybinds
 -- ==============
--- F1 help.txt  [insert/normal]
 -- Shift+<<|>>  [visual/normal] shift line/visual selection tab
 -- Ctrl+P       [insert] brings up the P Menu (lite auto completion)
-
+-- Ctrl+Page    [any] Switch tabs
+--
+-- Do not confuse ALT+SHIFT+Q with ALT+SHIFT+L|E 
+-- If you are using x11-base/xorg-server
+--
 -- Changing Mode
 -- -------------
 -- ESC || Ctrl+[    normal mode
