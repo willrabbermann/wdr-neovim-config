@@ -1,8 +1,7 @@
 # wdr-neovim-config
 My neovim configuration with sane keybinds and custom themes.
 
-```
---		WILLIAM RABBERMANN'S NEOVIM THEME      
+```    
 -------------------------------------------------
 -- Themes      
 -- ----------------------------      
