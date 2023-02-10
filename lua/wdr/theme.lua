@@ -6,11 +6,11 @@ local theme_number = 5
 
 -- Themes
 -- ----------------------------
--- TUI (transparent) cterm 	= 0
+-- TUI (transparent) cterm	= 0
 -- TUI (transparent) guic	= 1
 -- TUI (Soft blue)	 guic	= 2
--- Dark blue 		 guic	= 3
--- Darker 			 guic	= 4
+-- Dark blue		 guic	= 3
+-- Darker			 guic	= 4
 -- Black			 guic	= 5
 -- ----------------------------
 -- FTE replica		 guic	= 6
@@ -76,13 +76,13 @@ end
 if (theme_number < 6)
 	then	
 
-vim.api.nvim_set_hl(0, "Normal", 			{ ctermfg = "LightGrey", fg = normal, bg = background } )
+vim.api.nvim_set_hl(0, "Normal",			{ ctermfg = "LightGrey", fg = normal, bg = background } )
 
 -- Line number & current cursor line highlight
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'LineNr',			{ ctermfg = "DarkGrey", fg = darkgrey, bg = sidebar } )
 vim.api.nvim_set_hl(0, 'CursorLineNr',		{ ctermfg = "White", fg = "#DDDDDD", bg =  sidebar_cursor } )
-vim.api.nvim_set_hl(0, 'CursorLine', 		{ } ) -- disable cursor underline
+vim.api.nvim_set_hl(0, 'CursorLine',		{ } ) -- disable cursor underline
 
 -- Search highlights
 vim.api.nvim_set_hl(0, 'Search',			
@@ -101,7 +101,7 @@ vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = "LightMagenta", fg = lightmag
 -- delimiter is your parenthesis ()
 vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = Normal, fg = cyan } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
-vim.api.nvim_set_hl(0, 'cCppParen', 		{ link = 'Delimiter' } )
+vim.api.nvim_set_hl(0, 'cCppParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppBracket',		{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cBlock',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cParen',			{ link = 'Delimiter' } )
@@ -109,12 +109,12 @@ vim.api.nvim_set_hl(0, 'cBracket',			{ link = 'Delimiter' } )
 
 
 
-vim.api.nvim_set_hl(0, 'Structure', 		{ ctermfg = Normal, fg = cyan } )
-vim.api.nvim_set_hl(0, 'Operator', 			{ ctermfg = Normal, fg = cyan } )
-vim.api.nvim_set_hl(0, 'Identifier', 		{ ctermfg = Normal, fg = normal } )
-vim.api.nvim_set_hl(0, 'shShellVariables', 	{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, 'Structure',			{ ctermfg = Normal, fg = cyan } )
+vim.api.nvim_set_hl(0, 'Operator',			{ ctermfg = Normal, fg = cyan } )
+vim.api.nvim_set_hl(0, 'Identifier',		{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, 'shShellVariables',	{ ctermfg = Normal, fg = normal } )
 
-vim.api.nvim_set_hl(0, 'Comment',  			{ ctermfg = "Blue", fg = blue } )
+vim.api.nvim_set_hl(0, 'Comment',			{ ctermfg = "Blue", fg = blue } )
 
 vim.api.nvim_set_hl(0, 'Constant',			{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = "Red", fg = red } )
@@ -133,16 +133,16 @@ else
 	vim.api.nvim_set_hl(0, 'Function',		{ ctermfg = Normal, fg = normal } )
 end
 
-vim.api.nvim_set_hl(0, 'Todo', 				{ ctermfg = "DarkYellow", fg = darkyellow } )
+vim.api.nvim_set_hl(0, 'Todo',				{ ctermfg = "DarkYellow", fg = darkyellow } )
 
-vim.api.nvim_set_hl(0, 'Title',				{ 	fg = normal, bg = statusbar } )
+vim.api.nvim_set_hl(0, 'Title',				{	fg = normal, bg = statusbar } )
 
-vim.api.nvim_set_hl(0, 'Directory',			{ 	ctermfg = Normal, fg = cyan } )
+vim.api.nvim_set_hl(0, 'Directory',			{	ctermfg = Normal, fg = cyan } )
 
 vim.api.nvim_set_hl(0, 'TabLineSel',		{ bold = 0 } )
 vim.api.nvim_set_hl(0, 'TabLine',			{ bg = statusbar, underline = 1} )
 vim.api.nvim_set_hl(0, 'TabLineFill',		{ bg = statusbar, underline = 0} )
-vim.api.nvim_set_hl(0, 'WarningMsg',    	{ ctermbg = "DarkYellow", ctermfg = 'Black', fg = normal, bg = statusbar } )
+vim.api.nvim_set_hl(0, 'WarningMsg',		{ ctermbg = "DarkYellow", ctermfg = 'Black', fg = normal, bg = statusbar } )
 vim.api.nvim_set_hl(0, 'ErrorMsg',			{ ctermbg = "Red", ctermfg = 'Black', fg = black, bg = red } )
 vim.api.nvim_set_hl(0, 'Question',			{ ctermbg = 'DarkGreen', ctermfg = 'Black', italic = 1, 
 											fg = normal, bg = statusbar })
@@ -161,19 +161,19 @@ elseif (theme_number == 6)
 functions = '#27dbdd'
 normal = '#b6b6b6'
 
-vim.api.nvim_set_hl(0, "Normal", 			{ ctermfg = "LightGrey", fg = normal, bg = background } )
+vim.api.nvim_set_hl(0, "Normal",			{ ctermfg = "LightGrey", fg = normal, bg = background } )
 
 -- Line number & current cursor line highlight
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'LineNr',			{ ctermfg = "DarkGrey", fg = darkgrey, bg = sidebar } )
 vim.api.nvim_set_hl(0, 'CursorLineNr',		{ ctermfg = "White", fg = "#DDDDDD", bg =  sidebar_cursor } )
-vim.api.nvim_set_hl(0, 'CursorLine', 		{ } ) -- disable cursor underline
+vim.api.nvim_set_hl(0, 'CursorLine',		{ } ) -- disable cursor underline
 
 -- Search highlights
 vim.api.nvim_set_hl(0, 'Search',			
 	{ ctermbg = "DarkGrey", ctermfg = "White", bg = '#00a1a4'} )
 vim.api.nvim_set_hl(0, 'IncSearch',			
-	{ ctermbg = "DarkGrey", ctermfg = "LightCyan", 	fg = black, bg = "#FFFFFF" } )
+	{ ctermbg = "DarkGrey", ctermfg = "LightCyan",	fg = black, bg = "#FFFFFF" } )
 vim.api.nvim_set_hl(0, 'Visual',			{ link = 'Search' } )
 
 vim.api.nvim_set_hl(0, 'MatchParen',		{ bold = 1, underline = 1 } )
@@ -186,7 +186,7 @@ vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = Normal, fg = '#e8f135' } )
 -- delimiter is your parenthesis ()
 vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = "DarkGreen", fg = '#37908d' } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
-vim.api.nvim_set_hl(0, 'cCppParen', 		{ link = 'Delimiter' } )
+vim.api.nvim_set_hl(0, 'cCppParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppBracket',		{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cBlock',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cParen',			{ link = 'Delimiter' } )
@@ -194,12 +194,12 @@ vim.api.nvim_set_hl(0, 'cBracket',			{ link = 'Delimiter' } )
 
 
 
-vim.api.nvim_set_hl(0, 'Structure', 		{ ctermfg = Normal, fg = '#37908d' } )
-vim.api.nvim_set_hl(0, 'Operator', 			{ ctermfg = Normal, fg = '#37908d' } )
-vim.api.nvim_set_hl(0, 'Identifier', 		{ ctermfg = Normal, fg = normal } )
-vim.api.nvim_set_hl(0, 'shShellVariables', 	{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, 'Structure',			{ ctermfg = Normal, fg = '#37908d' } )
+vim.api.nvim_set_hl(0, 'Operator',			{ ctermfg = Normal, fg = '#37908d' } )
+vim.api.nvim_set_hl(0, 'Identifier',		{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, 'shShellVariables',	{ ctermfg = Normal, fg = normal } )
 
-vim.api.nvim_set_hl(0, 'Comment',  			{ ctermfg = "Blue", fg = '#999c2e' } )
+vim.api.nvim_set_hl(0, 'Comment',			{ ctermfg = "Blue", fg = '#999c2e' } )
 
 vim.api.nvim_set_hl(0, 'Constant',			{ ctermfg = "Magenta", fg = normal } )
 vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = "Magenta", fg = '#bd101c' } )
@@ -218,16 +218,16 @@ else
 	vim.api.nvim_set_hl(0, 'Function',			{ ctermfg = Normal, fg = normal } )
 end
 
-vim.api.nvim_set_hl(0, 'Todo', 				{ ctermfg = "DarkYellow", fg = darkyellow } )
+vim.api.nvim_set_hl(0, 'Todo',				{ ctermfg = "DarkYellow", fg = darkyellow } )
 
-vim.api.nvim_set_hl(0, 'Title',				{ 	fg = normal, bg = statusbar } )
+vim.api.nvim_set_hl(0, 'Title',				{	fg = normal, bg = statusbar } )
 
-vim.api.nvim_set_hl(0, 'Directory',			{ 	fg = '#37908d' } )
+vim.api.nvim_set_hl(0, 'Directory',			{	fg = '#37908d' } )
 
 vim.api.nvim_set_hl(0, 'TabLineSel',		{ bold = 0 } )
 vim.api.nvim_set_hl(0, 'TabLine',			{ bg = statusbar, underline = 1} )
 vim.api.nvim_set_hl(0, 'TabLineFill',		{ bg = statusbar, underline = 0} )
-vim.api.nvim_set_hl(0, 'WarningMsg',    	{ ctermbg = "DarkYellow", ctermfg = 'Black', fg = normal, bg = statusbar } )
+vim.api.nvim_set_hl(0, 'WarningMsg',		{ ctermbg = "DarkYellow", ctermfg = 'Black', fg = normal, bg = statusbar } )
 vim.api.nvim_set_hl(0, 'ErrorMsg',			{ ctermbg = "Red", ctermfg = 'Black', fg = black, bg = '#bd101c' } )
 vim.api.nvim_set_hl(0, 'Question',			{ ctermbg = 'DarkGreen', ctermfg = 'Black', italic = 1, 
 											  fg = normal, bg = statusbar })
