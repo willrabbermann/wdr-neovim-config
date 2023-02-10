@@ -81,7 +81,7 @@ map('x', '<C-f>', '"sy /<C-R>s<CR>')
 map_ni('<C-r>', '<ESC><ESC>*# viw"sy :%s///g<LEFT><LEFT><C-R>s', {ins=1}, { noremap=true, silent=false })
 map('x', '<C-r>', '"sy :%s/<C-R>s//g<LEFT><LEFT><C-R>s', { noremap=true, silent=false })
 
--- Retab selected lines to tabstop in visual mode (default) (:set noexpantab)
+-- Retab selected lines to tabstop in visual mode (default) (:set noexpandtab)
 -- or retab expanded to spaces with (:set expandtab)
 map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
@@ -99,10 +99,10 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 -- ==============
 -- Shift+<<|>>  [visual/normal] shift line/visual selection tab
 -- Ctrl+P       [insert] brings up the P Menu (lite auto completion)
--- Ctrl+Page    [any] Switch tabs
+-- Ctrl+Page    [any] switch tabs
 --
 -- Do not confuse ALT+SHIFT+Q with ALT+SHIFT+L|E 
--- If you are using x11-base/xorg-server
+-- if you are using x11-base/xorg-server
 --
 -- Changing Mode
 -- -------------
