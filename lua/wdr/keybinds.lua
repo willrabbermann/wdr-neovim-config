@@ -67,9 +67,14 @@ map('i', '<C-n>', '<ESC>')
 -- Better no highlight
 map_ni('<S-TAB>', ':nohl<CR>', {ins=1})
 map('x', '<S-TAB>', '<ESC>')
+-- Faster vertical cursor move
+map('', '<C-S-UP>', '<UP><UP><UP><UP><UP><UP>')
+map('i', '<C-S-UP>', '<UP><UP><UP><UP><UP><UP>')
+map('', '<C-S-DOWN>', '<DOWN><DOWN><DOWN><DOWN><DOWN><DOWN>')
+map('i', '<C-S-DOWN>', '<DOWN><DOWN><DOWN><DOWN><DOWN><DOWN>')
 
 -- Select current word
-map('n','8', 'viw')
+map('n', '8', 'viw')
 -- Find all current word / selection
 map_ni('<C-f>', '*# viw"sy')
 map('x', '<C-f>', '"sy /<C-R>s<CR>')
@@ -77,26 +82,28 @@ map('x', '<C-f>', '"sy /<C-R>s<CR>')
 map_ni('<C-r>', '<ESC><ESC>*# viw"sy :%s///g<LEFT><LEFT><C-R>s', {ins=1}, { noremap=true, silent=false })
 map('x', '<C-r>', '"sy :%s/<C-R>s//g<LEFT><LEFT><C-R>s', { noremap=true, silent=false })
 
+-- Retab selected lines to tabstop in visual mode
+map('x', '<C-S-T>', ':retab!<CR>', { noremap=true, silent=false })
+
 -- Function keys
 map('n', '<F2>',
 ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 map('n', '<F3>',
 ':luafile ~/.config/nvim/lua/wdr/keybinds.lua<CR>:echo "Reloaded keybinds.lua"<CR>')
 map('n', '<F4>', ':NvimTreeToggle<CR>')
-map_ni('<F5>', ':make ', {ins=1}, {noremap=true, silent=false})
+map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 
 
 -- Other keybinds
--- ================
+-- ==============
 -- F1 help.txt	[insert/normal]
--- Shift+<<|>> 	[visual/normal] shift line/visual selection tab
--- Ctrl+P 		[insert] brings up the P Menu (lite auto completion)
--- -------------
+-- Shift+<<|>>	[visual/normal] shift line/visual selection tab
+-- Ctrl+P		[insert] brings up the P Menu (lite auto completion)
+
 -- Changing Mode
 -- -------------
--- ESC || Ctrl+[ 	normal mode
--- i 				insert mode
--- v 				visual mode
--- : 				command mode
--- / 				pattern search mode
-
+-- ESC || Ctrl+[	normal mode
+-- I				insert mode
+-- v				visual mode
+-- :				command mode
+-- /				pattern search mode
