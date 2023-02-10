@@ -82,7 +82,7 @@ map_ni('<C-r>', '<ESC><ESC>*# viw"sy :%s///g<LEFT><LEFT><C-R>s', {ins=1}, { nore
 map('x', '<C-r>', '"sy :%s/<C-R>s//g<LEFT><LEFT><C-R>s', { noremap=true, silent=false })
 
 -- Retab selected lines to tabstop in visual mode (default) (:set noexpandtab)
--- or retab expanded to spaces with (:set expandtab)
+-- or retab tabs to spaces with (:set expandtab)
 map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
 -- Function keys
