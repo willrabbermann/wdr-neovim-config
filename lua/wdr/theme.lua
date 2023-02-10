@@ -1,19 +1,19 @@
 -------------------------------------------------
---		WILLIAM RABBERMANN'S NEOVIM THEME
+--      WILLIAM RABBERMANN'S NEOVIM THEME
 -------------------------------------------------
 
 local theme_number = 5
 
 -- Themes
 -- ----------------------------
--- TUI (transparent) cterm	= 0
--- TUI (transparent) guic	= 1
--- TUI (Soft blue)	 guic	= 2
--- Dark blue		 guic	= 3
--- Darker			 guic	= 4
--- Black			 guic	= 5
+-- TUI (transparent) cterm  = 0
+-- TUI (transparent) guic   = 1
+-- TUI (Soft blue)   guic   = 2
+-- Dark blue         guic   = 3
+-- Darker            guic   = 4
+-- Black             guic   = 5
 -- ----------------------------
--- FTE replica		 guic	= 6
+-- FTE replica       guic   = 6
 -- ----------------------------
 -- FLAGS
 -- -------------------------------------
@@ -145,7 +145,7 @@ vim.api.nvim_set_hl(0, 'TabLineFill',		{ bg = statusbar, underline = 0} )
 vim.api.nvim_set_hl(0, 'WarningMsg',		{ ctermbg = "DarkYellow", ctermfg = 'Black', fg = normal, bg = statusbar } )
 vim.api.nvim_set_hl(0, 'ErrorMsg',			{ ctermbg = "Red", ctermfg = 'Black', fg = black, bg = red } )
 vim.api.nvim_set_hl(0, 'Question',			{ ctermbg = 'DarkGreen', ctermfg = 'Black', italic = 1, 
-											fg = normal, bg = statusbar })
+												fg = normal, bg = statusbar })
 vim.api.nvim_set_hl(0, 'Pmenu',				{ ctermbg = 0, bg = statusbar, sp = 'NONE' } )
 vim.api.nvim_set_hl(0, 'PmenuSel',			{ ctermbg = 0, bg = Black, fg = White } )
 vim.api.nvim_set_hl(0, 'NonText',			{ ctermfg = 0, fg = background, bg = background, sp = 'NONE' } )
@@ -213,9 +213,9 @@ vim.api.nvim_set_hl(0, 'Keyword',			{ ctermfg = "White", fg = '#ffffff' } )
 
 if (functions_flag == 1)
 	then
-	vim.api.nvim_set_hl(0, 'Function',			{ ctermfg = "LightBlue", fg = functions } )
+	vim.api.nvim_set_hl(0, 'Function',		{ ctermfg = "LightBlue", fg = functions } )
 else
-	vim.api.nvim_set_hl(0, 'Function',			{ ctermfg = Normal, fg = normal } )
+	vim.api.nvim_set_hl(0, 'Function',		{ ctermfg = Normal, fg = normal } )
 end
 
 vim.api.nvim_set_hl(0, 'Todo',				{ ctermfg = "DarkYellow", fg = darkyellow } )
