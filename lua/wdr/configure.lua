@@ -3,6 +3,7 @@ vim.o.title = true
 vim.o.cindent = true
 vim.o.ts = 4
 vim.o.sw = 4
+vim.o.so = 999
 vim.wo.number = true
 vim.o.hlsearch = true
 

@@ -57,10 +57,10 @@ map_ni('<C-H>', '0', {ins=1})
 map('x', '<C-E>', '$')
 map('x', '<C-H>', '0')
 -- Better Next / Previous search pattern
-map_ni('<A-DOWN>', '/<CR>', {ins=1})
-map_ni('<A-UP>', '?<CR>', {ins=1})
 map_ni('<A-RIGHT>','/<CR>', {ins=1})
 map_ni('<A-LEFT>', '?<CR>', {ins=1})
+map('n', 'n', '/<CR>') 
+map('n', '<S-N>', '?<CR>') 
 -- Better Normal mode key
 map('', '<C-n>', '<ESC>')
 map('i', '<C-n>', '<ESC>')
@@ -68,10 +68,10 @@ map('i', '<C-n>', '<ESC>')
 map_ni('<S-TAB>', ':nohl<CR>', {ins=1})
 map('x', '<S-TAB>', '<ESC>')
 -- Faster vertical cursor move
-map('', '<C-S-UP>', '<UP><UP><UP><UP><UP><UP>')
-map('i', '<C-S-UP>', '<UP><UP><UP><UP><UP><UP>')
-map('', '<C-S-DOWN>', '<DOWN><DOWN><DOWN><DOWN><DOWN><DOWN>')
-map('i', '<C-S-DOWN>', '<DOWN><DOWN><DOWN><DOWN><DOWN><DOWN>')
+map('', '<A-UP>', '<UP><UP><UP><UP><UP><UP>')
+map('i', '<A-UP>', '<UP><UP><UP><UP><UP><UP>')
+map('', '<A-DOWN>', '<DOWN><DOWN><DOWN><DOWN><DOWN><DOWN>')
+map('i', '<A-DOWN>', '<DOWN><DOWN><DOWN><DOWN><DOWN><DOWN>')
 
 -- Select current word
 map('n', '8', 'viw')
