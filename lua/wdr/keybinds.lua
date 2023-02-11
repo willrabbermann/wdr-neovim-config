@@ -89,7 +89,7 @@ map('n', 'gr', "gd[{V%::s/<C-R>///gc<left><left><left>", { noremap=true, silent=
 map('n', 'gR', "gD:%s/<C-R>///gc<LEFT><LEFT><LEFT>", { noremap=true, silent=false })
 
 -- Retab selected lines to tabstop in visual mode (default) (:set noexpandtab)
--- or retab expanded to spaces with (:set expandtab)
+-- or retab to spaces with (:set expandtab)
 map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
 -- Function keys
@@ -106,10 +106,10 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 -- ==============
 -- Shift+<<|>>  [visual/normal] shift line/visual selection tab
 -- Ctrl+P       [insert] brings up the P Menu (lite auto completion)
--- Ctrl+Page    [any] Switch tabs
+-- Ctrl+Page    [any] switch tabs
 --
 -- Do not confuse ALT+SHIFT+Q with ALT+SHIFT+L|E 
--- If you are using x11-base/xorg-server
+-- if you are using x11-base/xorg-server
 --
 -- Changing Mode
 -- -------------
