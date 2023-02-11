@@ -78,6 +78,7 @@ map('n', '8', 'viw')
 map_ni('<C-f>', 'viw"sy /<C-R>s<CR>?<CR>')
 map('x', '<C-f>', '"sy /<C-R>s<CR>?<CR>')
 
+<<<<<<< HEAD
 -- Replace ANY occurance of current (under cursor) word 
 -- or replace any occurance of visual selection
 map('n', '<C-r>', 'viw"sy /<C-R>s<CR>?<CR> :%s//<C-R>s/gc<LEFT><LEFT><LEFT>', { noremap=true, silent=false })
@@ -90,6 +91,10 @@ map('n', 'gR', "gD:%s/<C-R>///gc<LEFT><LEFT><LEFT>", { noremap=true, silent=fals
 
 -- Retab selected lines to tabstop in visual mode (default) (:set noexpandtab)
 -- or retab expanded to spaces with (:set expandtab)
+=======
+-- Retab selected lines to tabstop in visual mode (default) (:set noexpandtab)
+-- or retab tabs to spaces with (:set expandtab)
+>>>>>>> refs/remotes/origin/main
 map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
 -- Function keys
@@ -106,10 +111,10 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 -- ==============
 -- Shift+<<|>>  [visual/normal] shift line/visual selection tab
 -- Ctrl+P       [insert] brings up the P Menu (lite auto completion)
--- Ctrl+Page    [any] Switch tabs
+-- Ctrl+Page    [any] switch tabs
 --
 -- Do not confuse ALT+SHIFT+Q with ALT+SHIFT+L|E 
--- If you are using x11-base/xorg-server
+-- if you are using x11-base/xorg-server
 --
 -- Changing Mode
 -- -------------
