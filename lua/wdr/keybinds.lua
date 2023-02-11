@@ -75,13 +75,20 @@ map('i', '<A-DOWN>', '<DOWN><DOWN><DOWN><DOWN>')
 -- Select current word
 map('n', '8', 'viw')
 -- Find all current word / selection
-map_ni('<C-f>', '*# viw"sy')
-map('x', '<C-f>', '"sy /<C-R>s<CR>')
--- Search & Replace current word / selection
-map_ni('<C-r>', '<ESC><ESC>*# viw"sy :%s///g<LEFT><LEFT><C-R>s', {ins=1}, { noremap=true, silent=false })
-map('x', '<C-r>', '"sy :%s/<C-R>s//g<LEFT><LEFT><C-R>s', { noremap=true, silent=false })
+map_ni('<C-f>', 'viw"sy /<C-R>s<CR>?<CR>')
+map('x', '<C-f>', '"sy /<C-R>s<CR>?<CR>')
 
--- Retab selected lines to tabstop in visual mode (default) (:set noexpantab)
+-- Replace ANY occurance of current (under cursor) word 
+-- or replace any occurance of visual selection
+map('n', '<C-r>', 'viw"sy /<C-R>s<CR>?<CR> :%s//<C-R>s/gc<LEFT><LEFT><LEFT>', { noremap=true, silent=false })
+map('x', '<C-r>', '"sy :%s/<C-R>s/<C-R>s/gc<LEFT><LEFT><LEFT>', { noremap=true, silent=false })
+-- Replace definition of variable under cursor
+-- Locally
+map('n', 'gr', "gd[{V%::s/<C-R>///gc<left><left><left>", { noremap=true, silent=false })
+-- Globally
+map('n', 'gR', "gD:%s/<C-R>///gc<LEFT><LEFT><LEFT>", { noremap=true, silent=false })
+
+-- Retab selected lines to tabstop in visual mode (default) (:set noexpandtab)
 -- or retab expanded to spaces with (:set expandtab)
 map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
