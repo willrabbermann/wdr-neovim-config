@@ -19,6 +19,17 @@ local function map_ni(lhs, rhs, args, opts)
 		map('n', lhs, rhs, opts)
 end
 
+-- Global macro functions
+
+function ToggleSpelling()
+	if vim.go.spell then
+		vim.o.spell = false
+	else
+		vim.o.spell = true
+	end
+end
+
+
 -- Save and Quit
 map_ni('<C-s>', ':w<CR>', {sleepins=1})
 map_ni('<C-S-S>', ':wq<CR>')
@@ -66,6 +77,7 @@ map('i', '<C-n>', '<ESC>')
 -- No highlight key
 map('n', '<S-TAB>', ':nohl<CR><C-L>')
 map('i', '<S-TAB>', '<ESC>:nohl<CR><C-L>i')
+map('c', '<S-TAB>', '<ESC>')
 map('x', '<S-TAB>', '<ESC>:nohl<CR><C-L>')
 -- Faster vertical cursor move
 map('', '<A-UP>', '<UP><UP><UP><UP>')
@@ -79,8 +91,8 @@ map('n', '8', 'viw')
 map_ni('<C-f>', 'viw"sy /<C-R>s<CR>?<CR>')
 map('x', '<C-f>', '"sy /<C-R>s<CR>?<CR>')
 
--- Replace ANY occurance of current (under cursor) word 
--- or replace any occurance of visual selection
+-- Replace ANY occurrence of current (under cursor) word 
+-- or replace any occurrence of visual selection
 map('n', '<C-r>', 'viw"sy /<C-R>s<CR>?<CR> :%s//<C-R>s/gc<LEFT><LEFT><LEFT>', { noremap=true, silent=false })
 map('x', '<C-r>', '"sy :%s/<C-R>s/<C-R>s/gc<LEFT><LEFT><LEFT>', { noremap=true, silent=false })
 -- Replace definition of variable under cursor
@@ -99,8 +111,9 @@ map('n', '<F2>',
 ':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
 map('n', '<F3>',
 ':luafile ~/.config/nvim/lua/wdr/keybinds.lua<CR>:echo "Reloaded keybinds.lua"<CR>')
-map('n', '<F4>', ':NvimTreeToggle<CR>')
+map_ni('<F4>', ':NvimTreeToggle<CR><C-L>')
 map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
+map_ni('<F6>', ':lua ToggleSpelling()<CR>', {ins=1})
 
 
 -- Other keybinds
@@ -108,10 +121,12 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 -- Shift+<<|>>  [visual/normal] shift line/visual selection tab
 -- Ctrl+P       [insert] brings up the P Menu (lite auto completion)
 -- Ctrl+Page    [any] switch tabs
---
+-- Ctrl+X s		[insert] bring up spelling correction menu
+
 -- Do not confuse ALT+SHIFT+Q with ALT+SHIFT+L|E 
 -- if you are using x11-base/xorg-server
---
+
+
 -- Changing Mode
 -- -------------
 -- ESC || Ctrl+[    normal mode
@@ -119,8 +134,8 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 -- v                visual mode
 -- :                command mode
 -- /                pattern search mode
---
---
+
+
 --         Mode  | Norm | Ins | Cmd | Vis | Sel | Opr | Term | Lang |
 --Command        +------+-----+-----+-----+-----+-----+------+------+
 --[nore]map      | yes  |  -  |  -  | yes | yes | yes |  -   |  -   |

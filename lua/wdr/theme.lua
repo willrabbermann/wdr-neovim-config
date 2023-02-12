@@ -2,7 +2,7 @@
 --      WILLIAM RABBERMANN'S NEOVIM THEME
 -------------------------------------------------
 
-local theme_number = 1
+local theme_number = 5
 
 -- Themes
 -- ----------------------------
@@ -78,7 +78,7 @@ if (theme_number < 6)
 
 vim.api.nvim_set_hl(0, "Normal",			{ ctermfg = "LightGrey", fg = normal, bg = background } )
 
--- Spell checking
+-- spell checking
 -- alacritty >= 0.11.0 required for undercurl
 vim.api.nvim_set_hl(0, "SpellBad", { undercurl = 1 } )
 vim.api.nvim_set_hl(0, "SpellLocal", { } )
