@@ -4,6 +4,8 @@ vim.o.cindent = true
 vim.o.ts = 4
 vim.o.sw = 4
 vim.o.so = 999
+vim.o.shm = 'I'
+vim.o.smd = false
 vim.wo.number = true
 vim.o.hlsearch = true
 
@@ -13,8 +15,8 @@ require('lualine').setup({
   options = {
 	icons_enabled = true,
 	theme = 'codedark',
-	component_separators = { left = ' // ', right = ' // '},
-	section_separators = { left = ' ', right = ' '},
+	component_separators = {},
+	section_separators = { left = '▓▒░ ', right = ' ░▒▓'},
 	disabled_filetypes = {
 	  statusline = {},
 	  winbar = {},
@@ -74,5 +76,3 @@ require("nvim-tree").setup({
 
 -- configure treesitter
 require("nvim-treesitter.configs").setup({highlight={enable=true}})
-
-

@@ -64,8 +64,9 @@ map('n', '<S-N>', '?<CR>')
 map('', '<C-n>', '<ESC>')
 map('i', '<C-n>', '<ESC>')
 -- No highlight key
-map_ni('<S-TAB>', ':nohl<CR>', {ins=1})
-map('x', '<S-TAB>', '<ESC>')
+map('n', '<S-TAB>', ':nohl<CR><C-L>')
+map('i', '<S-TAB>', '<ESC>:nohl<CR><C-L>i')
+map('x', '<S-TAB>', '<ESC>:nohl<CR><C-L>')
 -- Faster vertical cursor move
 map('', '<A-UP>', '<UP><UP><UP><UP>')
 map('i', '<A-UP>', '<UP><UP><UP><UP>')
@@ -118,3 +119,18 @@ map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 -- v                visual mode
 -- :                command mode
 -- /                pattern search mode
+--
+--
+--         Mode  | Norm | Ins | Cmd | Vis | Sel | Opr | Term | Lang |
+--Command        +------+-----+-----+-----+-----+-----+------+------+
+--[nore]map      | yes  |  -  |  -  | yes | yes | yes |  -   |  -   |
+--n[nore]map     | yes  |  -  |  -  |  -  |  -  |  -  |  -   |  -   |
+--[nore]map!     |  -   | yes | yes |  -  |  -  |  -  |  -   |  -   |
+--i[nore]map     |  -   | yes |  -  |  -  |  -  |  -  |  -   |  -   |
+--c[nore]map     |  -   |  -  | yes |  -  |  -  |  -  |  -   |  -   |
+--v[nore]map     |  -   |  -  |  -  | yes | yes |  -  |  -   |  -   |
+--x[nore]map     |  -   |  -  |  -  | yes |  -  |  -  |  -   |  -   |
+--s[nore]map     |  -   |  -  |  -  |  -  | yes |  -  |  -   |  -   |
+--o[nore]map     |  -   |  -  |  -  |  -  |  -  | yes |  -   |  -   |
+--t[nore]map     |  -   |  -  |  -  |  -  |  -  |  -  | yes  |  -   |
+--l[nore]map     |  -   | yes | yes |  -  |  -  |  -  |  -   | yes  |
