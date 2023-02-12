@@ -1,4 +1,3 @@
-
 vim.o.title = true
 vim.o.cindent = true
 vim.o.ts = 4
@@ -34,7 +33,7 @@ require('lualine').setup({
 	lualine_a = {'mode'},
 	lualine_b = {'branch', 'diff', 'diagnostics'},
 	lualine_c = {'filename'},
-	lualine_x = {'encoding', {'fileformat', symbols = { unix = "λ"}}, 'filetype'},
+	lualine_x = {'encoding', {'fileformat', symbols = { unix = "λ" }}, 'filetype'},
 	lualine_y = {'progress'},
 	lualine_z = {'location'}
   },
