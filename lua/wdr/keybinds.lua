@@ -1,3 +1,5 @@
+-- Pressing <F3> reloads this file
+
 local function map(mode, lhs, rhs, opts)
 	local options = { noremap=true, silent=true }
 	if opts then
@@ -19,8 +21,6 @@ local function map_ni(lhs, rhs, args, opts)
 		map('n', lhs, rhs, opts)
 end
 
--- Global macro functions
-
 function ToggleSpelling()
 	if vim.go.spell then
 		vim.o.spell = false
@@ -28,7 +28,6 @@ function ToggleSpelling()
 		vim.o.spell = true
 	end
 end
-
 
 -- Save and Quit
 map_ni('<C-s>', ':w<CR>', {sleepins=1})
@@ -107,10 +106,10 @@ map('x', '<C-T>', ':retab!<CR>', { noremap=true, silent=false })
 
 -- Function keys
 map_ni('<F1>', ':tabnew<CR>:help | only<CR>')
-map('n', '<F2>',
-':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>')
-map('n', '<F3>',
-':luafile ~/.config/nvim/lua/wdr/keybinds.lua<CR>:echo "Reloaded keybinds.lua"<CR>')
+map_ni('<F2>',
+':luafile ~/.config/nvim/lua/wdr/theme.lua<CR>:echo "Reloaded theme.lua"<CR>i')
+map_ni('<F3>',
+':luafile ~/.config/nvim/lua/wdr/keybinds.lua<CR>:echo "Reloaded keybinds.lua"<CR>i')
 map_ni('<F4>', ':NvimTreeToggle<CR><C-L>')
 map_ni('<F5>', ':make ', {ins=1}, { noremap=true, silent=false })
 map_ni('<F6>', ':lua ToggleSpelling()<CR>', {ins=1})

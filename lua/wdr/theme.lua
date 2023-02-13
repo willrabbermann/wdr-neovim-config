@@ -1,27 +1,23 @@
--------------------------------------------------
---      WILLIAM RABBERMANN'S NEOVIM THEME
--------------------------------------------------
 
 local theme_number = 5
 
--- Themes
+-- Pressing <F2> reloads this file.
 -- ----------------------------
--- TUI (transparent) cterm  = 0
--- TUI (transparent) guic   = 1
--- TUI (Soft blue)   guic   = 2
--- Dark blue         guic   = 3
--- Darker            guic   = 4
--- Black             guic   = 5
+-- My custom theme (green, blue, cyan, purple, red)
+-- (transparent)            = 0 <- (terminal colors only)
+-- (transparent)            = 1
+-- Dark teal                = 2
+-- Dark blue                = 3
+-- Dark                     = 4
+-- Black                    = 5
 -- ----------------------------
--- FTE replica       guic   = 6
+-- FTE replica              = 6
 -- ----------------------------
 -- FLAGS
 -- -------------------------------------
--- enable function highlights
-
+-- function highlights
 local functions_flag = 1
 -- force line number bar to match status bar
--- 0 will use the theme's custom selection
 local match_status = 0
 -----------------------------------------
 
@@ -49,13 +45,13 @@ if (theme_number == 0)
 	vim.opt.termguicolors = false
 elseif (theme_number == 2)
 	then
-	background = '#2b303b'
+	background = '#0b191c'
 elseif (theme_number == 3) 
 	then
-	background = '#222526'
+	background = '#010022'
 elseif (theme_number == 4)
 	then
-	background = '#15181D'
+	background = '#1a1a1a'
 elseif (theme_number == 5 or theme_number == 6)
 	then
 	background = '#000000'
@@ -73,17 +69,14 @@ else
 	sidebar = '#242934'
 end
 
+-- -------------------------------------
+-- My theme
+-- -------------------------------------
+
 if (theme_number < 6)
 	then	
 
 vim.api.nvim_set_hl(0, "Normal",			{ ctermfg = "LightGrey", fg = normal, bg = background } )
-
--- spell checking
--- alacritty >= 0.11.0 required for undercurl
-vim.api.nvim_set_hl(0, "SpellBad", { undercurl = 1 } )
-vim.api.nvim_set_hl(0, "SpellLocal", { } )
-vim.api.nvim_set_hl(0, "SpellRare", { } )
-vim.api.nvim_set_hl(0, "SpellCap", { } )
 
 -- Line number & current cursor line highlight
 vim.o.cursorline = true
@@ -103,10 +96,10 @@ vim.api.nvim_set_hl(0, 'MatchParen',		{ bold = 1, underline = 1 } )
 vim.api.nvim_set_hl(0, 'SpecialKey',		{ ctermfg = Normal, fg = normal } )
 
 -- Special is apparently brackets {} 
-vim.api.nvim_set_hl(0, 'Special',			{ ctermfg = Normal, fg = cyan } )
+vim.api.nvim_set_hl(0, 'Special',			{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = "LightMagenta", fg = lightmagenta } )
 -- delimiter is your parenthesis ()
-vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = Normal, fg = cyan } )
+vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppBracket',		{ link = 'Delimiter' } )
@@ -114,10 +107,8 @@ vim.api.nvim_set_hl(0, 'cBlock',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cBracket',			{ link = 'Delimiter' } )
 
-
-
-vim.api.nvim_set_hl(0, 'Structure',			{ ctermfg = Normal, fg = cyan } )
-vim.api.nvim_set_hl(0, 'Operator',			{ ctermfg = Normal, fg = cyan } )
+vim.api.nvim_set_hl(0, 'Structure',			{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, 'Operator',			{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'Identifier',		{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'shShellVariables',	{ ctermfg = Normal, fg = normal } )
 
@@ -128,10 +119,10 @@ vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = "Red", fg = red } )
 vim.api.nvim_set_hl(0, 'String',			{ ctermfg = "Magenta", fg = magenta } )
 vim.api.nvim_set_hl(0, 'Character',			{ ctermfg = "LightMagenta", fg = lightmagenta } )
 vim.api.nvim_set_hl(0, 'Boolean',			{ ctermfg = "Red", fg = red } )
-vim.api.nvim_set_hl(0, 'Type',				{ ctermfg = "White", fg = green } )
+vim.api.nvim_set_hl(0, 'Type',				{ ctermfg = "Green", fg = green } )
 vim.api.nvim_set_hl(0, 'PreProc',			{ ctermfg = "LightCyan", fg = lightcyan } )
 vim.api.nvim_set_hl(0, 'Statement',			{ ctermfg = "Green", fg = green } )
-vim.api.nvim_set_hl(0, 'Keyword',			{ ctermfg = "White", fg = green } )
+vim.api.nvim_set_hl(0, 'Keyword',			{ ctermfg = "Green", fg = green } )
 
 if (functions_flag == 1)
 	then
@@ -161,7 +152,10 @@ vim.api.nvim_set_hl(0, 'MoreMsg',			{ fg = normal } )
 vim.api.nvim_set_hl(0, 'ModeMsg',			{ ctermfg = 0, fg = background, bg = background, sp = 'NONE' } ) -- disable ModeMsg
 vim.api.nvim_set_hl(0, 'StatusLine',		{ ctermfg = 0, fg = background, bg = background, sp = 'NONE' } ) -- disable StatusLine
 
+-- -------------------------------------
 -- FTE theme
+-- -------------------------------------
+
 elseif (theme_number == 6)
 	then	
 
@@ -191,15 +185,13 @@ vim.api.nvim_set_hl(0, 'SpecialKey',		{ ctermfg = Normal, link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'Special',			{ ctermfg = Normal, fg = '#37908d' } )
 vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = Normal, fg = '#e8f135' } )
 -- delimiter is your parenthesis ()
-vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = "DarkGreen", fg = '#37908d' } )
+vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = "Cyan", fg = '#37908d' } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppBracket',		{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cBlock',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cBracket',			{ link = 'Delimiter' } )
-
-
 
 vim.api.nvim_set_hl(0, 'Structure',			{ ctermfg = Normal, fg = '#37908d' } )
 vim.api.nvim_set_hl(0, 'Operator',			{ ctermfg = Normal, fg = '#37908d' } )
@@ -254,3 +246,10 @@ vim.api.nvim_set_hl(0, 'DiffAdd',			{ ctermfg = "Green",  fg = green, bg = sideb
 vim.api.nvim_set_hl(0, 'DiffChange',		{ ctermfg = "Yellow", fg = darkyellow, bg = sidebar } )
 vim.api.nvim_set_hl(0, 'DiffDelete',		{ ctermfg = "Red", fg = red, bg = sidebar} )
 vim.api.nvim_set_hl(0, 'SignColumn',		{ ctermfg = "DarkGrey", bg = sidebar} )
+
+-- alacritty >= 0.11.0 required for undercurl
+vim.api.nvim_set_hl(0, "SpellBad", { undercurl = 1 } )
+vim.api.nvim_set_hl(0, "SpellLocal", { } )
+vim.api.nvim_set_hl(0, "SpellRare", { } )
+vim.api.nvim_set_hl(0, "SpellCap", { } )
+
