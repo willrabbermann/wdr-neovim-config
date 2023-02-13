@@ -1,5 +1,5 @@
 
-local theme_number = 5
+local theme_number = 1
 
 -- Pressing <F2> reloads this file.
 -- ----------------------------
@@ -15,10 +15,16 @@ local theme_number = 5
 -- ----------------------------
 -- FLAGS
 -- -------------------------------------
--- function highlights
+-- enable function highlights
 local functions_flag = 1
--- force line number bar to match status bar
-local match_status = 0
+-- match line number bar to status bar
+local match_status = 1
+-- match current line number to statusbar
+local cur_ln_bg_statusbar = 1
+-- disable line number background
+local no_ln_bg = 1
+-- disable current line number background
+local no_cur_ln_bg = 1
 -----------------------------------------
 
 local normal = '#c0c5ce'
@@ -51,18 +57,24 @@ elseif (theme_number == 3)
 	background = '#010022'
 elseif (theme_number == 4)
 	then
-	background = '#1a1a1a'
+	background = '#181818'
 elseif (theme_number == 5 or theme_number == 6)
 	then
 	background = '#000000'
 end
 
+if (no_cur_ln_bg == 1) then
+	sidebar_cursor = null
+elseif (cur_ln_bg_statusbar == 1) then
+	sidebar_cursor = statusbar
+end
+
 local sidebar 
-if (theme_number == 4 or match_status == 1)
-	then
+if (no_ln_bg == 1) then
+	sidebar = null 
+elseif (theme_number == 4 or match_status == 1) then
 	sidebar = statusbar 
-elseif (theme_number == 5 or theme_number == 6)
-	then
+elseif (theme_number == 5 or theme_number == 6) then
 	sidebar = '#000000'
 	sidebar_cursor = '#202020'
 else
