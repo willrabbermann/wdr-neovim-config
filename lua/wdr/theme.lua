@@ -18,13 +18,13 @@ local theme_number = 1
 -- enable function highlights
 local functions_flag = 1
 -- match line number bar to status bar
-local match_status = 1
--- match current line number to statusbar
-local cur_ln_bg_statusbar = 1
+local match_status = 0
+-- match current line number to status bar
+local cur_ln_bg_statusbar = 0
 -- disable line number background
 local no_ln_bg = 1
 -- disable current line number background
-local no_cur_ln_bg = 1
+local no_cur_ln_bg = 0
 -----------------------------------------
 
 local normal = '#c0c5ce'

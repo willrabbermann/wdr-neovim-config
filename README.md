@@ -20,7 +20,7 @@ My neovim configuration with sane keybinds and custom themes.
 local functions_flag = 1
 -- match line number bar to status bar
 local match_status = 1
--- match current line number to statusbar
+-- match current line number to status bar
 local cur_ln_bg_statusbar = 1
 -- disable line number background
 local no_ln_bg = 1
