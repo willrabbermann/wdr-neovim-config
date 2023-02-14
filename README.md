@@ -17,15 +17,15 @@ My neovim configuration with sane keybinds and custom themes.
 -- FLAGS
 -- -------------------------------------
 -- enable function highlights
-local functions_flag = 1
+local FUNCTIONS_HIGHLIGHT = 1
 -- match line number bar to status bar
-local match_status = 1
+local MATCH_STATUS_HIGHLIGHT = 0
 -- match current line number to status bar
-local cur_ln_bg_statusbar = 1
+local MATCH_CURRENT_LN_BG_STATUS = 0
 -- disable line number background
-local no_ln_bg = 1
+local DISABLE_SIDEBAR_BG = 1
 -- disable current line number background
-local no_cur_ln_bg = 1
+local DISABLE_CURRENT_LN_BG = 0
 -----------------------------------------
 ```
 Set the theme number by editing ```theme.lua```
