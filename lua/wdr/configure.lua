@@ -7,6 +7,7 @@ vim.o.shm = 'I'
 vim.o.smd = false
 vim.wo.number = true
 vim.o.hlsearch = true
+vim.o.mouse = false
 
 require('gitsigns').setup()
 
