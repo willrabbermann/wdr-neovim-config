@@ -107,10 +107,11 @@ vim.api.nvim_set_hl(0, 'MatchParen',		{ bold = 1, underline = 1 } )
 
 vim.api.nvim_set_hl(0, 'SpecialKey',		{ ctermfg = Normal, fg = normal } )
 
--- Special is apparently brackets {} 
+-- Special is {}
 vim.api.nvim_set_hl(0, 'Special',			{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = "LightMagenta", fg = lightmagenta } )
--- delimiter is your parenthesis ()
+
+-- Delimiter is ()
 vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppParen',			{ link = 'Delimiter' } )
@@ -127,6 +128,7 @@ vim.api.nvim_set_hl(0, 'shShellVariables',	{ ctermfg = Normal, fg = normal } )
 vim.api.nvim_set_hl(0, 'Comment',			{ ctermfg = "Blue", fg = blue } )
 
 vim.api.nvim_set_hl(0, 'Constant',			{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, '@constant.builtin',	{ link = "Constant" } )
 vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = "Red", fg = red } )
 vim.api.nvim_set_hl(0, 'String',			{ ctermfg = "Magenta", fg = magenta } )
 vim.api.nvim_set_hl(0, 'Character',			{ ctermfg = "LightMagenta", fg = lightmagenta } )
@@ -193,10 +195,9 @@ vim.api.nvim_set_hl(0, 'MatchParen',		{ bold = 1, underline = 1 } )
 
 vim.api.nvim_set_hl(0, 'SpecialKey',		{ ctermfg = Normal, link = 'Delimiter' } )
 
--- Special is apparently brackets {} and special characters (escape seqs)
 vim.api.nvim_set_hl(0, 'Special',			{ ctermfg = Normal, fg = '#37908d' } )
 vim.api.nvim_set_hl(0, 'SpecialChar',		{ ctermfg = Normal, fg = '#e8f135' } )
--- delimiter is your parenthesis ()
+
 vim.api.nvim_set_hl(0, 'Delimiter',			{ ctermfg = "Cyan", fg = '#37908d' } )
 vim.api.nvim_set_hl(0, 'luaParen',			{ link = 'Delimiter' } )
 vim.api.nvim_set_hl(0, 'cCppParen',			{ link = 'Delimiter' } )
@@ -212,13 +213,14 @@ vim.api.nvim_set_hl(0, 'shShellVariables',	{ ctermfg = Normal, fg = normal } )
 
 vim.api.nvim_set_hl(0, 'Comment',			{ ctermfg = "Blue", fg = '#999c2e' } )
 
-vim.api.nvim_set_hl(0, 'Constant',			{ ctermfg = "Magenta", fg = normal } )
-vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = "Magenta", fg = '#bd101c' } )
-vim.api.nvim_set_hl(0, 'String',			{ ctermfg = "Magenta", fg = '#e8f135' } )
-vim.api.nvim_set_hl(0, 'Character',			{ ctermfg = "Magenta", fg = '#e8f135' } )
-vim.api.nvim_set_hl(0, 'Boolean',			{ ctermfg = "Magenta", fg = '#bd101c' } )
-vim.api.nvim_set_hl(0, 'Type',				{ ctermfg = "White", fg = '#ffffff' } )
-vim.api.nvim_set_hl(0, 'PreProc',			{ ctermfg = "LightCyan", fg = '#00ec00' } )
+vim.api.nvim_set_hl(0, 'Constant',			{ ctermfg = Normal, fg = normal } )
+vim.api.nvim_set_hl(0, '@constant.builtin',	{ link = 'Constant' } )
+vim.api.nvim_set_hl(0, 'Number',			{ ctermfg = Normal, fg = '#bd101c' } )
+vim.api.nvim_set_hl(0, 'String',			{ ctermfg = Normal, fg = '#e8f135' } )
+vim.api.nvim_set_hl(0, 'Character',			{ ctermfg = Normal, fg = '#e8f135' } )
+vim.api.nvim_set_hl(0, 'Boolean',			{ ctermfg = Normal, fg = '#bd101c' } )
+vim.api.nvim_set_hl(0, 'Type',				{ ctermfg = Normal, fg = '#ffffff' } )
+vim.api.nvim_set_hl(0, 'PreProc',			{ ctermfg = "LightGreen", fg = '#00ec00' } )
 vim.api.nvim_set_hl(0, 'Statement',			{ ctermfg = "White", fg = '#ffffff' } )
 vim.api.nvim_set_hl(0, 'Keyword',			{ ctermfg = "White", fg = '#ffffff' } )
 
