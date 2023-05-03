@@ -58,20 +58,17 @@ vim.g.loaded_netrwPlugin = 1
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
-	adaptive_size = true,
-	mappings = {
-	  list = {
-		{ key = "u", action = "dir_up" },
-	  },
-	},
+    width = 30,
   },
   renderer = {
-	group_empty = true,
+    group_empty = true,
   },
   filters = {
-	dotfiles = true,
+    dotfiles = true,
   },
 })
 
 -- configure treesitter
-require("nvim-treesitter.configs").setup({highlight={enable=true}})
+require("nvim-treesitter.configs").setup{
+    highlight={enable=true}, 
+}

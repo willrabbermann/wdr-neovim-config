@@ -26,7 +26,7 @@ require('packer').startup(function(use)
 			ts_update()
 		end,
 	}
-	
+
 	-- tree view
 	use	'nvim-tree/nvim-tree.lua'
 	
